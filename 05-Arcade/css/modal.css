@@ -1,0 +1,17 @@
+/* ================= MODAL ================= */
+.modal-back{position:fixed;inset:0;z-index:80;background:rgba(5,5,10,.82);display:grid;place-items:center;padding:20px;animation:fade .2s}
+@keyframes fade{from{opacity:0}}
+.modal{width:min(100%,460px);background:var(--panel);border:2px solid var(--mag);border-radius:12px;padding:clamp(22px,5vw,36px);text-align:center;
+  box-shadow:0 0 30px rgba(255,0,110,.45),inset 0 0 30px rgba(255,0,110,.08);animation:pop .3s cubic-bezier(.2,1.4,.4,1)}
+@keyframes pop{from{transform:scale(.85);opacity:0}}
+.modal h2{font-family:var(--pixel);font-weight:400;font-size:clamp(18px,4.4vw,26px);margin:0 0 22px;color:#ffe3f0;line-height:1.4;text-shadow:0 0 6px #fff,0 0 16px var(--mag),0 0 34px var(--mag)}
+.modal .lbl{font-family:var(--pixel);font-size:9px;color:var(--muted);margin:0 0 10px}
+.final{font-family:var(--pixel);font-size:clamp(22px,6vw,34px);color:var(--yel);text-shadow:0 0 14px var(--yel);margin-bottom:10px}
+.record{font-family:var(--pixel);font-size:10px;color:var(--cyan);text-shadow:0 0 8px var(--cyan);margin:0 0 6px;animation:blink .6s steps(1) 6}
+.typer{min-height:26px;font-family:var(--pixel);font-size:11px;color:#39ff14;text-shadow:0 0 8px #39ff14;margin:16px 0 6px}
+.typer::after{content:"█";animation:blink .7s steps(1) infinite;margin-left:2px}
+.typer:empty::after{content:""}
+.save-note{font-size:14px;color:var(--muted);margin:0 0 6px;min-height:1px}
+.modal .stack{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+.modal .row{display:flex;gap:12px}
+.modal .row .btn{flex:1;padding-left:10px;padding-right:10px}

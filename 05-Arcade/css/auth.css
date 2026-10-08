@@ -1,0 +1,17 @@
+/* ================= AUTH ================= */
+.auth-wrap{display:grid;place-items:center;padding:clamp(28px,7vw,72px) 0}
+.auth{width:min(100%,440px);background:rgba(13,13,22,.92);border:2px solid var(--line);border-radius:12px;padding:clamp(22px,5vw,36px);box-shadow:0 0 40px rgba(0,245,255,.12)}
+.auth .logo-sm{font-family:var(--pixel);text-align:center;font-size:18px;line-height:1.6;margin:0 0 26px;color:#eaffff;text-shadow:0 0 6px var(--cyan),0 0 20px var(--cyan)}
+.auth .logo-sm span{color:#ffe3f0;text-shadow:0 0 6px var(--mag),0 0 20px var(--mag)}
+.tabs{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--line);margin-bottom:24px}
+.tabs button{font-family:var(--pixel);font-size:9px;padding:14px 6px;background:none;border:0;color:var(--muted);line-height:1.5}
+.tabs button[aria-selected="true"]{background:var(--cyan);color:var(--bg);box-shadow:0 0 16px rgba(0,245,255,.5)}
+.auth label{display:block;font-weight:700;font-size:14px;margin:0 0 6px;color:var(--cyan)}
+.auth .f{margin-bottom:16px}
+.err{color:var(--mag);font-size:14px;min-height:20px;margin:-4px 0 10px;font-weight:700}
+.divider{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:13px;margin:22px 0 14px}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--line)}
+.social{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.social .btn{font-family:var(--mono);font-weight:700;font-size:15px;letter-spacing:0;text-transform:none;padding:12px}
+.guest{width:100%;margin-top:18px}
+.note{font-size:13px;color:var(--muted);text-align:center;margin:12px 0 0}

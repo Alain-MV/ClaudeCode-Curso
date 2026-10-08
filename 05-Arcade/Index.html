@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ARCADE VAULT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/background.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/library.css">
+<link rel="stylesheet" href="css/detail.css">
+<link rel="stylesheet" href="css/player.css">
+<link rel="stylesheet" href="css/modal.css">
+<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/fame.css">
+<link rel="stylesheet" href="css/toast.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"><div class="ceiling"></div><div class="horizon"></div><div class="floor"></div></div>
+<div class="scan" aria-hidden="true"></div>
+
+<nav class="nav" aria-label="Principal">
+  <a class="nav-logo" href="#/">ARCADE<span>VAULT</span></a>
+  <div class="nav-links">
+    <a href="#/" data-nav="library">Biblioteca</a>
+    <a href="#/salon" data-nav="fame">Salón de la Fama</a>
+  </div>
+  <div class="nav-right" id="navRight"></div>
+  <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><i></i><i></i><i></i></button>
+</nav>
+<div class="drawer-back" id="drawerBack"></div>
+<aside class="drawer" id="drawer" aria-label="Menú móvil">
+  <button class="close" id="drawerClose" aria-label="Cerrar menú">✕</button>
+  <div id="drawerBody"></div>
+</aside>
+
+<main id="app"></main>
+<footer>ARCADE VAULT · Puntuaciones guardadas en este navegador</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+
+<script src="js/core/utils.js"></script>
+<script src="js/core/store.js"></script>
+<script src="js/core/api.js"></script>
+<script src="js/core/session.js"></script>
+<script src="js/engine/engine.js"></script>
+<script src="js/games/snake.js"></script>
+<script src="js/games/blocks.js"></script>
+<script src="js/games/breakout.js"></script>
+<script src="js/games/invaders.js"></script>
+<script src="js/games/asteroids.js"></script>
+<script src="js/games/tennis.js"></script>
+<script src="js/catalog/games.js"></script>
+<script src="js/catalog/covers.js"></script>
+<script src="js/ui/nav.js"></script>
+<script src="js/router.js"></script>
+<script src="js/views/library.js"></script>
+<script src="js/views/detail.js"></script>
+<script src="js/views/player.js"></script>
+<script src="js/views/gameover.js"></script>
+<script src="js/views/auth.js"></script>
+<script src="js/views/fame.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

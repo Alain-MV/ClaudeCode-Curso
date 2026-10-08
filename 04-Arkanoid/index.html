@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arkanoid</title>
+  <style>
+    :root {
+      --bg: #0b0e1a;
+      --panel: #121734;
+      --accent: #4de2ff;
+      --text: #e8ecff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      background: radial-gradient(circle at 50% 0%, #1a2150 0%, var(--bg) 70%);
+      color: var(--text);
+      font-family: "Segoe UI", system-ui, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 16px;
+    }
+    h1 {
+      font-size: 1.6rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-shadow: 0 0 12px rgba(77, 226, 255, 0.6);
+    }
+    .hud {
+      display: flex;
+      gap: 32px;
+      font-size: 1rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .hud span { color: var(--accent); font-weight: 600; }
+    .stage {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.6), inset 0 0 0 2px rgba(77, 226, 255, 0.2);
+    }
+    canvas { display: block; background: #060814; }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      text-align: center;
+      background: rgba(6, 8, 20, 0.82);
+      backdrop-filter: blur(2px);
+      padding: 24px;
+    }
+    .overlay.hidden { display: none; }
+    .overlay h2 { font-size: 2rem; letter-spacing: 2px; }
+    .overlay p { opacity: 0.85; max-width: 420px; line-height: 1.5; }
+    .overlay button {
+      margin-top: 8px;
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #061018;
+      background: var(--accent);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.1s ease, box-shadow 0.2s ease;
+      box-shadow: 0 0 20px rgba(77, 226, 255, 0.5);
+    }
+    .overlay button:hover { transform: translateY(-2px); }
+    .hint { font-size: 0.85rem; opacity: 0.6; }
+  </style>
+</head>
+<body>
+  <h1>Arkanoid</h1>
+  <div class="hud">
+    <div>Puntos: <span id="score">0</span></div>
+    <div>Vidas: <span id="lives">3</span></div>
+    <div>Nivel: <span id="level">1</span></div>
+  </div>
+  <div class="stage">
+    <canvas id="game" width="770" height="560"></canvas>
+    <div class="overlay" id="overlay">
+      <h2 id="overlayTitle">Arkanoid</h2>
+      <p id="overlayText">Rompe todos los bloques con la bola sin dejarla caer.</p>
+      <button id="startBtn">Jugar</button>
+    </div>
+  </div>
+  <p class="hint">Mueve con el ratón o ← →. Lanza la bola con clic o barra espaciadora.</p>
+
+  <script src="assets/spritesheet.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
